@@ -1,103 +1,70 @@
 import Image from "next/image";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ImageSlider from "@/components/ImageSlider";
+import WhatsAPP from "@/components/WhatsAPP";
+import Call from "@/components/Call";
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="">
+      <div className="max-w-md m-auto border relative">
+        <ImageSlider />
+        <div className="px-4">
+          <div>
+            <p className="font-semibold text-2xl text-blue-400">
+              Shop For Rent
+            </p>
+            <p className="text-lg text-gray-600">Shagun Antalia</p>
+            <p className="text-lg text-gray-600">
+              Ground Floor, Shop NO.9,
+              <br /> SQ FT:609
+            </p>
+            <p className="font-semibold text-2xl text-blue-400 mt-3">Address</p>
+            <p className="text-lg text-gray-600">
+              Opp OM.Residency, near Bank of Baroda,
+              <br /> Silver Star Cross Road, Chandlodiya, Ahmedabad
+            </p>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <p className="font-semibold text-2xl text-blue-400 my-3 ">
+            More Inquiry
+          </p>
+          <p className="text-lg text-gray-600">
+            For shop rent inquiries, call or message on WhatsApp.
+          </p>
+
+          <p className="font-semibold text-2xl text-blue-400 my-3 ">Map</p>
+          <div style={{ width: "100%", marginBottom: "6rem" }}>
+            <iframe
+              width="100%"
+              height="400"
+              frameBorder="0"
+              scrolling="no"
+              marginHeight={0}
+              marginWidth={0}
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Shagun%20Antilia,near%20Avirat%20Sopan%20Sharan,%20Chandlodiya,%20Ahmedabad,%20Gujarat%20380055+(Shop%20Location)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            >
+              <a href="https://www.gps.ie/collections/sports-gps/">Sport GPS</a>
+            </iframe>
+          </div>
+
+          <div className="fixed p-2  bottom-2 flex justify-between w-full gap-2 right-0">
+            <Link
+              href={"tel:+919974367173"}
+              className="w-1/2 py-1.5 rounded-md bg-blue-400 flex items-center justify-center"
+            >
+              <Call />
+            </Link>
+            <Link
+              className="w-1/2 py-1.5 rounded-md bg-green-400 flex justify-center"
+              href={`https://wa.me/+919974367173?text=Your Name:%0AYour Offer:%0AWhat type of business will you run in the shop?:`}
+            >
+              <WhatsAPP />
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
