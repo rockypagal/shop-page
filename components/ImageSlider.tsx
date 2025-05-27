@@ -18,40 +18,40 @@ function ImageSlider() {
       <Slider {...settings}>
         <div>
           <Image
-            src={"/img/2.jpg"}
+            src={"/img/3.webp"}
             alt="image 1"
             width={300}
             height={300}
-            className="w-full"
+            className="w-[1000px] h-[404px] object-cover"
+          />
+        </div>{" "}
+        <div>
+          <Image
+            src={"/img/4.webp"}
+            alt="image 1"
+            width={300}
+            height={300}
+            className="w-[1000px] h-[404px] object-cover"
           />
         </div>
         <div>
+          <Image
+            src={"/img/5.webp"}
+            alt="image 1"
+            width={300}
+            height={300}
+            className="w-[1000px] h-[404px] object-cover"
+          />
+        </div>
+        {/* <div>
           <Image
             src={"/img/2.jpg"}
             alt="image 1"
             width={300}
             height={300}
-            className="w-full"
+            className="w-[1000px] h-[404px] object-cover"
           />
-        </div>
-        <div>
-          <Image
-            src={"/img/2.jpg"}
-            alt="image 1"
-            width={300}
-            height={300}
-            className="w-full"
-          />
-        </div>
-        <div>
-          <Image
-            src={"/img/2.jpg"}
-            alt="image 1"
-            width={300}
-            height={300}
-            className="w-full"
-          />
-        </div>
+        </div> */}
       </Slider>
     </div>
   );

@@ -8,9 +8,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="">
-      <div className="max-w-md m-auto border relative">
+      <div className="max-w-md m-auto border">
         <ImageSlider />
-        <div className="px-4">
+        <div className="px-4  relative">
           <div>
             <p className="font-semibold text-2xl text-blue-400">
               Shop For Rent
@@ -49,7 +49,7 @@ export default function Home() {
             </iframe>
           </div>
 
-          <div className="fixed p-2  bottom-2 flex justify-between w-full gap-2 right-0">
+          <div className="fixed p-2 left-0  bottom-2 flex justify-between w-full gap-2 right-0">
             <Link
               href={"tel:+919974367173"}
               className="w-1/2 py-1.5 rounded-md bg-blue-400 flex items-center justify-center"
